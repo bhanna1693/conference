@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: brian
@@ -17,7 +18,9 @@
 <form:form modelAttribute="registration">
     <table>
         <tr>
-            <td>Name:</td>
+            <td>
+                <spring:message code="name"/>
+            </td>
             <td>
                 <form:input path="name"/>
             </td>

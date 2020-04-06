@@ -13,14 +13,13 @@ public class RegistrationController {
 
     @GetMapping("registration")
     public String registration(@ModelAttribute("registration") Registration registration) {
-        registration.setName("Brian");
         return "registration";
     }
 
     @PostMapping("registration")
     public String addRegistration(@ModelAttribute("registration") Registration registration) {
         System.out.println("Registration: " + registration.getName());
-        return "registration";
+        return "redirect:registration";
     }
 
 
