@@ -11,11 +11,24 @@
 <html>
 <head>
     <title>Registration</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .errorblock {
+            color: black;
+            background-color: #ffeeee;
+            border: 3px solid #ffeeee;
+            padding: 8px;
+            margin: 16px;
+        }
+    </style>
 </head>
 <body>
 <h1>Registration</h1>
 
 <form:form modelAttribute="registration">
+    <form:errors path="*" cssClass="errorblock" element="div" />
     <table>
         <tr>
             <td>
@@ -24,10 +37,13 @@
             <td>
                 <form:input path="name"/>
             </td>
+            <td>
+                <form:errors path="name" cssClass="error" />
+            </td>
         </tr>
 
         <tr>
-            <td colspan="2">
+            <td colspan="3">
                 <input type="submit" value="Add Registration">
             </td>
         </tr>
